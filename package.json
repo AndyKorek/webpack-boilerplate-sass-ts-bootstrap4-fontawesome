@@ -1,0 +1,71 @@
+{
+  "name": "webpack4-boilerplate",
+  "version": "1.5.0",
+  "main": "src/js/index.js",
+  "repository": "git@github.com:AndyKorek/webpack4_boilerplate.git",
+  "author": "Andy K.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-material-design": "^4.1.1",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
+    "popper.js": "^1.14.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@fortawesome/fontawesome-free": "^5.7.1",
+    "autoprefixer": "^9.4.10",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-lodash": "^3.3.4",
+    "clean-webpack-plugin": "^2.0.0",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "csv-loader": "^3.0.2",
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-loader": "^2.1.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.0.7",
+    "img-loader": "^3.0.1",
+    "install": "^0.10.4",
+    "lodash-webpack-plugin": "^0.11.5",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "terser-webpack-plugin": "^1.2.3",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1",
+    "xml-loader": "^1.2.1"
+  },
+  "keywords": [
+    "webppack",
+    "sass",
+    "bootstrap4",
+    "jquery",
+    "popperjs",
+    "livereload",
+    "dev-server",
+    "font-awesome",
+    "material icons",
+    "es-lint"
+  ]
+}

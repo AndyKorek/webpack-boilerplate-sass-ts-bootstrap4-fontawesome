@@ -1,0 +1,28 @@
+@import '../../node_modules/animate.css/animate.css';
+@import "bootstrap";
+@import "bootstrap_material";
+@import "fonts";
+@import "variables";
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+footer {
+  background-color: darkslateblue;
+  color: $color-black;
+}
