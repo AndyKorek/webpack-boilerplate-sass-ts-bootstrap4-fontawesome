@@ -86,7 +86,7 @@ Make sure these are installed first.
 
 <hr/>
 
-###Build the Production Folder
+### Build the Production Folder
 `npm run build`
 
 This will:
