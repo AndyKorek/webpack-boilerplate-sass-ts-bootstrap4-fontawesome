@@ -77,8 +77,7 @@ Make sure these are installed first.
 ### Quick Start
 
 1. Clone the repo :
-    
-      `git clone https://github.com/AndyKorek/webpack4_boilerplate.git
+      `git clone https://github.com/AndyKorek/Webpack4_Boilerplate.git
      `
 2. In bash/terminal/command line, `cd webpack4_boilerplate` into project directory.
 3. Run `npm i` to install required files and dependencies.
