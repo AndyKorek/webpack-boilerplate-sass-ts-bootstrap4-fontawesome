@@ -113,12 +113,15 @@ This will:
 │   ├── assets
 │   │   └── images
 │   ├── js
-│   │   ├── _bootstrap.js
-│   │   ├── _bootstrap_material.js
+│   │   ├── _vendor
+|   |   |     └── _bootstrap.js
 │   │   ├── _custom.js
 │   │   ├── _vendor.js
 │   │   └── index.js
 │   ├── _scss
+│   │   ├── _vendor
+|   |   |     ├── _bootstrap.scss
+|   |   |     └── _animeteit.scss
 │   │   ├── _fonts.scss
 │   │   ├── _variables.scss
 │   │   └── main.scss
@@ -143,11 +146,9 @@ This will:
 ```
 ### Loading the Features you need
 
-in  `_boostrap.js` uncomment all Features you need
+in  `src/js/vendor/_boostrap.js` uncomment all Features you need
 
-in  `_bootstrap_material.js` uncomment all Features you need
-
-put your custom js to `_custom.js`
+put your custom js to `src/js/_custom.js`
 
 
 <hr/>
