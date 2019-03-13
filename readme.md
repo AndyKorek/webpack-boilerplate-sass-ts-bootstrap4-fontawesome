@@ -9,7 +9,6 @@
                 <a href="https://eslint.org/"><img src="https://img.shields.io/badge/es--lint-4.19.1-%23463fd4.svg" alt="eslint"><a/>
                 <a href="https://fontawesome.com/"><img alt="node-sass" src="https://img.shields.io/badge/Font--Awesome-5.7.1-blue.svg"></a>
                 <a href="https://material.io"><img src="https://img.shields.io/badge/Material--Icons-latest-critical.svg" alt="Material-Icons"></a>
-                <a href="https://material.io"><img src="https://img.shields.io/badge/Boostrap--Material__Design-3.0.1-orange.svg" alt="Material-Icons"></a>
 </p>
 
 ![bootstrap logo](https://abload.de/img/bootstrap-logo-vector78khf.png)
@@ -50,6 +49,8 @@ This project contains the following loaders & plugins:
 
 - `node-sass` for compiling sass (SCSS)
 - `babel-loader` for compiling ES6 code
+- `babel-eslint && eslint-loader` for Linting your .js
+- `lodash-webpack-plugin` create smaller Lodash builds by replacing feature sets of modules with noop, identity, or simpler alternatives.
 - `webpack-dev-server` for serving & Hot-Reloading
 - `css-loader` for compressing css
 - `sass-loader` for compressing and loading scss & sass
