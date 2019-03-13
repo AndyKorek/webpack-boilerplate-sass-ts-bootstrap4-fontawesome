@@ -22,16 +22,13 @@
   SASS
   · Babel
   · Bootstrap
-  · Boostrap Material
   · JQuery
   · PopperJS
   · Font Awesome
   </em>
 </p>
 
-This Gulp-Sass boilerplate starter contains the features and scripts you need to get started quickly with Gulp Runner and building, Live Loading.
-
-It contains the following features:
+This Webpack4-Sass Boilerplate contains the following features:
 
 - Webpack4 & Dev-Server
 - Babel ES6 Compiler
