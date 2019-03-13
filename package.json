@@ -15,7 +15,6 @@
   "dependencies": {
     "animate.css": "^3.7.0",
     "bootstrap": "^4.3.1",
-    "bootstrap-material-design": "^4.1.1",
     "jquery": "^3.3.1",
     "lodash": "^4.17.11",
     "popper.js": "^1.14.7"

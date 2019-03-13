@@ -1,9 +1,13 @@
-@import '../../node_modules/animate.css/animate.css';
-@import "bootstrap";
-@import "bootstrap_material";
+/*!
+ *
+ *
+ * main.scss
+ *
+ *
+ */
+
 @import "fonts";
 @import "variables";
-
 
 html, body {
   margin: 0;
@@ -20,9 +24,12 @@ html {
 body {
   background-color: white;
   color: black;
+  font-family: $font-family-roboto-sans-serif;
+  font-size: 16px;
 }
 
 footer {
   background-color: darkslateblue;
   color: $color-black;
+  font-family: $font-family-roboto-sans-serif;
 }

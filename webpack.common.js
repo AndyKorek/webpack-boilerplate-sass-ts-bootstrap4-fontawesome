@@ -1,17 +1,15 @@
+// Common Config is used in Development and Production Mode.
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
-
-const buildPath = path.resolve(__dirname, 'dist');
-
-
 const paths = {
     dest: {
         img: 'assets/images/'
-    }
+    },
+    build: path.resolve(__dirname, 'dist')
 };
 
 module.exports = {
@@ -20,7 +18,7 @@ module.exports = {
         vendor: './src/js/_vendor.js',
     },
     output: {
-        path: buildPath,
+        path: paths.build,
         filename: 'js/[name].[contenthash].js'
     },
     module: {
@@ -52,13 +50,14 @@ module.exports = {
                     },
                 ]
             },
-            //  Babel Loader
+            //  Babel esLint
             {
                 enforce: 'pre',
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'eslint-loader'
             },
+            // Babel Loader
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
