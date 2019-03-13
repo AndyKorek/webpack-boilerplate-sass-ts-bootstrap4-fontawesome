@@ -9,7 +9,6 @@
                 <a href="https://eslint.org/"><img src="https://img.shields.io/badge/es--lint-4.19.1-%23463fd4.svg" alt="eslint"><a/>
                 <a href="https://fontawesome.com/"><img alt="node-sass" src="https://img.shields.io/badge/Font--Awesome-5.7.1-blue.svg"></a>
                 <a href="https://material.io"><img src="https://img.shields.io/badge/Material--Icons-latest-critical.svg" alt="Material-Icons"></a>
-                <a href="https://material.io"><img src="https://img.shields.io/badge/Boostrap--Material__Design-3.0.1-orange.svg" alt="Material-Icons"></a>
 </p>
 
 ![bootstrap logo](https://abload.de/img/bootstrap-logo-vector78khf.png)
@@ -22,16 +21,13 @@
   SASS
   · Babel
   · Bootstrap
-  · Boostrap Material
   · JQuery
   · PopperJS
   · Font Awesome
   </em>
 </p>
 
-This Gulp-Sass boilerplate starter contains the features and scripts you need to get started quickly with Gulp Runner and building, Live Loading.
-
-It contains the following features:
+This Webpack4-Sass Boilerplate contains the following features:
 
 - Webpack4 & Dev-Server
 - Babel ES6 Compiler
@@ -53,6 +49,8 @@ This project contains the following loaders & plugins:
 
 - `node-sass` for compiling sass (SCSS)
 - `babel-loader` for compiling ES6 code
+- `babel-eslint && eslint-loader` for Linting your .js
+- `lodash-webpack-plugin` create smaller Lodash builds by replacing feature sets of modules with noop, identity, or simpler alternatives.
 - `webpack-dev-server` for serving & Hot-Reloading
 - `css-loader` for compressing css
 - `sass-loader` for compressing and loading scss & sass
@@ -77,8 +75,7 @@ Make sure these are installed first.
 ### Quick Start
 
 1. Clone the repo :
-    
-      `git clone https://github.com/AndyKorek/webpack4_boilerplate.git
+      `git clone https://github.com/AndyKorek/Webpack4_Boilerplate.git
      `
 2. In bash/terminal/command line, `cd webpack4_boilerplate` into project directory.
 3. Run `npm i` to install required files and dependencies.
@@ -87,7 +84,7 @@ Make sure these are installed first.
 
 <hr/>
 
-###Build the Production Folder
+### Build the Production Folder
 `npm run build`
 
 This will:
@@ -114,12 +111,15 @@ This will:
 │   ├── assets
 │   │   └── images
 │   ├── js
-│   │   ├── _bootstrap.js
-│   │   ├── _bootstrap_material.js
+│   │   ├── _vendor
+|   |   |     └── _bootstrap.js
 │   │   ├── _custom.js
 │   │   ├── _vendor.js
 │   │   └── index.js
 │   ├── _scss
+│   │   ├── _vendor
+|   |   |     ├── _bootstrap.scss
+|   |   |     └── _animeteit.scss
 │   │   ├── _fonts.scss
 │   │   ├── _variables.scss
 │   │   └── main.scss
@@ -144,11 +144,9 @@ This will:
 ```
 ### Loading the Features you need
 
-in  `_boostrap.js` uncomment all Features you need
+in  `src/js/vendor/_boostrap.js` uncomment all Features you need
 
-in  `_bootstrap_material.js` uncomment all Features you need
-
-put your custom js to `_custom.js`
+put your custom js to `src/js/_custom.js`
 
 
 <hr/>
