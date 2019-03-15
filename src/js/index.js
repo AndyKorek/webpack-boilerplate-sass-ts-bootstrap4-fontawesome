@@ -4,5 +4,8 @@ import '../sass/_vendor/_animateit.scss'
 import '../sass/main.scss'
 
 //  JS
-import '../js/_custom'
+import './_custom'
+
+// Pug partials
+
 

@@ -2,7 +2,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 const paths = {
@@ -14,12 +13,12 @@ const paths = {
 
 module.exports = {
     entry: {
-        app: './src/js/index.js',
+        main: './src/js/index.js',
         vendor: './src/js/_vendor.js',
     },
     output: {
         path: paths.build,
-        filename: 'js/[name].[contenthash].js'
+        filename: './js/[name].[chunkhash].js',
     },
     module: {
         rules: [
@@ -40,13 +39,11 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
+                            publicPath: '../',
                             name: paths.dest.img + '[name].[ext]',
-                            limit: 10000
+                            limit: 10000,
                         }
 
-                    },
-                    {
-                        loader: 'img-loader'
                     },
                 ]
             },
@@ -80,7 +77,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
