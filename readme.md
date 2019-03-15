@@ -8,7 +8,6 @@
                 <a href="https://jquery.com/"><img src="https://img.shields.io/badge/jQuery-3.3.1-blue.svg" alt="jquery"></a>
                 <a href="https://eslint.org/"><img src="https://img.shields.io/badge/es--lint-4.19.1-%23463fd4.svg" alt="eslint"><a/>
                 <a href="https://fontawesome.com/"><img alt="node-sass" src="https://img.shields.io/badge/Font--Awesome-5.7.1-blue.svg"></a>
-                <a href="https://material.io"><img src="https://img.shields.io/badge/Material--Icons-latest-critical.svg" alt="Material-Icons"></a>
 </p>
 
 ![bootstrap logo](https://abload.de/img/bootstrap-logo-vector78khf.png)
@@ -37,7 +36,7 @@ This Webpack4-Sass Boilerplate contains the following features:
 - JQuery v3.3.1
 - PopperJS
 - lodash
-- Concatenate and minify JavaScript.
+- concentrate and minify JavaScript.
 - Compile, minify, autoprefix SASS.
 - Optimize and Cache Images
 
@@ -54,7 +53,7 @@ This project contains the following loaders & plugins:
 - `webpack-dev-server` for serving & Hot-Reloading
 - `css-loader` for compressing css
 - `sass-loader` for compressing and loading scss & sass
-- `url & image loader` for loading and optimizing images
+- `url- & file-loader` for loading and optimizing images
 - `xml and csv loader` for loading data files
 - `html-loader` for loading & optimizing html files
 - `clean-webpack-plugin` for keeping your dist folder clean
@@ -80,7 +79,7 @@ Make sure these are installed first.
 2. In bash/terminal/command line, `cd webpack4_boilerplate` into project directory.
 3. Run `npm i` to install required files and dependencies.
 
-4. Run the Dev Server with `npm run dev`
+4. Run the Dev Server with (with Hot Reloading) `npm run dev`
 
 <hr/>
 
@@ -109,10 +108,12 @@ This will:
 
 ├── src
 │   ├── assets
+│   │   |── data
 │   │   └── images
 │   ├── js
 │   │   ├── _vendor
-|   |   |     └── _bootstrap.js
+|   |   |     |── _bootstrap.js
+│   │   |     └── _fontawesome.js
 │   │   ├── _custom.js
 │   │   ├── _vendor.js
 │   │   └── index.js
@@ -166,6 +167,7 @@ put your custom js to `src/js/_custom.js`
 ## TODO list
 
 - [x] Bootstrap 4
+- [ ] implement Pug 2 as Template Engine
 - [x] Webpack 4
 - [x] Jquery
 - [x] PopperJS
