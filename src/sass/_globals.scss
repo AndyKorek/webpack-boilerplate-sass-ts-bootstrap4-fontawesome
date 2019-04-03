@@ -1,0 +1,44 @@
+@import "typography";
+@import "_utils/variables";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%; //1rem = 10px, 3.5rem = 35px
+
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: $font-family-roboto-sans-serif;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-family: $font-family-roboto-sans-serif, serif;
+  font-size: 3.0rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: $font-family-roboto-sans-serif, serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+h3 {
+
+}
+
+h4 {
+
+}
+h5 {
+
+}

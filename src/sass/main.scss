@@ -1,24 +1,18 @@
-@import "fonts";
-@import "variables";
+//! Vendors /*Bootstrap, AnimateIt.
+@import "../sass/_vendor/animateit";
+@import "../sass/_vendor/bootstrap";
 
-html, body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  height: 100%;
-}
+//! utilities / helpers
+@import "_utils/variables";
+@import "_utils/mixins";
 
-html {
-  height: 100%;
+//! Gloabal _base Styles
+@import "setup";
+@import "typography";
+@import "globals";
 
-}
 
-body {
-  background-color: white;
-  color: black;
-  font-family: $font-family-roboto-sans-serif;
-  font-size: 16px;
-}
+
 
 footer {
   background-color: darkslateblue;

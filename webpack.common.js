@@ -3,6 +3,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+
 
 const paths = {
     dest: {
@@ -18,7 +20,7 @@ module.exports = {
     },
     output: {
         path: paths.build,
-        filename: './js/[name].[chunkhash].js',
+        filename: './js/[name].js',
     },
     module: {
         rules: [
@@ -46,6 +48,17 @@ module.exports = {
 
                     },
                 ]
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        name: 'fonts/[name].[hash:6].[ext]',
+                        publicPath: '../',
+                        limit: 8192,
+                    }
+                }]
             },
             //  Babel esLint
             {
@@ -83,12 +96,16 @@ module.exports = {
         }),
         new HtmlWebPackPlugin({
             template: 'src/index.html',
-            filename: './index.html'
+            filename: './index.html',
+            inject: 'head'
         }),
         // Load Lodash Features Separately https://www.npmjs.com/package/lodash-webpack-plugin
         new LodashModuleReplacementPlugin({
             'collections': true,
             'paths': true
-        })
+        }),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'defer'
+        }),
     ]
 };

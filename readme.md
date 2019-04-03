@@ -57,6 +57,8 @@ This project contains the following loaders & plugins:
 - `xml and csv loader` for loading data files
 - `html-loader` for loading & optimizing html files
 - `clean-webpack-plugin` for keeping your dist folder clean
+- `favicons-webpack-plugin` generate favicons form your "logo.png"
+
 
 ## Getting Started
 
@@ -117,12 +119,16 @@ This will:
 │   │   ├── _custom.js
 │   │   ├── _vendor.js
 │   │   └── index.js
-│   ├── _scss
+│   ├── _sass
+│   │   ├── _utils
+|   |   |     ├── _mixins.scss
+|   |   |     └── _variables.scss
 │   │   ├── _vendor
-|   |   |     ├── _bootstrap.scss
-|   |   |     └── _animeteit.scss
-│   │   ├── _fonts.scss
-│   │   ├── _variables.scss
+|   |   |     ├── _animateit.scss
+|   |   |     └── bootstrap.scss
+│   │   ├── _globals.scss
+│   │   ├── _setup.scss
+│   │   ├── _typography.scss
 │   │   └── main.scss
 │   │
 │   └── index.html
@@ -135,10 +141,12 @@ This will:
 │   │   ├── images
 │   │   └── 
 │   ├── css
-│   │   └── app.css
+│   │   ├── vendors.[contenthash].css
+│   │   └── main.contenthash].css
 │   ├── js
-│   │   ├── vendor.bundle.js
-│   │   └── app.bundle.js
+│   │   ├── main.[contenthash].js
+│   │   ├── runtime.[contenthash].js
+│   │   └── vendors.[contenthash].js
 │   │   
 │   └── index.html
 
@@ -167,7 +175,6 @@ put your custom js to `src/js/_custom.js`
 ## TODO list
 
 - [x] Bootstrap 4
-- [ ] implement Pug 2 as Template Engine
 - [x] Webpack 4
 - [x] Jquery
 - [x] PopperJS
