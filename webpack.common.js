@@ -19,8 +19,6 @@ module.exports = {
     entry:
         {
             index: './src/ts/index.ts',
-            vendor: './src/ts/_vendor.ts',
-            custom: './src/ts/custom.ts',
         },
     output: {
         path: paths.build,

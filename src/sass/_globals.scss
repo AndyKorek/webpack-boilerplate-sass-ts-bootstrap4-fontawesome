@@ -1,5 +1,23 @@
 @import "typography";
-@import "_utils/variables";
+@import "variables";
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
 
 html, body {
   margin: 0;
@@ -21,24 +39,4 @@ body {
   font-size: 1.6rem;
 }
 
-h1 {
-  font-family: $font-family-roboto-sans-serif, serif;
-  font-size: 3.0rem;
-  font-weight: 500;
-}
 
-h2 {
-  font-family: $font-family-roboto-sans-serif, serif;
-  font-size: 1.7rem;
-  font-weight: 400;
-}
-h3 {
-
-}
-
-h4 {
-
-}
-h5 {
-
-}

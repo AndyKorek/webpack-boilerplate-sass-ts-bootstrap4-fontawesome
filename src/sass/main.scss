@@ -1,17 +1,13 @@
-//! Vendors /*Bootstrap, AnimateIt.
-@import "../sass/_vendor/animateit";
-@import "../sass/_vendor/bootstrap";
+// Vendors
+@import "vendor";
 
 //! utilities / helpers
-@import "_utils/variables";
+@import "variables";
 @import "_utils/mixins";
 
 //! Gloabal _base Styles
-@import "setup";
 @import "typography";
 @import "globals";
-
-
 
 
 footer {
