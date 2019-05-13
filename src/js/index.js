@@ -5,7 +5,3 @@ import '../sass/main.scss'
 
 //  JS
 import './_custom'
-
-// Pug partials
-
-

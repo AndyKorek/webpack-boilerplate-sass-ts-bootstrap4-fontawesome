@@ -17,6 +17,7 @@ module.exports = {
     entry: {
         main: './src/js/index.js',
         vendor: './src/js/_vendor.js',
+        ts: './src/ts/main.ts'
     },
     output: {
         path: paths.build,
@@ -86,8 +87,21 @@ module.exports = {
                 use: [
                     'xml-loader'
                 ]
+            },
+            {
+                test: /\.ts(x?)$/,
+                exclude: /node_modules/,
+                use: [
+                    'babel-loader',
+                    {
+                    loader: 'ts-loader'
+                    }
+                ]
             }
         ]
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js']
     },
     plugins: [
         new webpack.ProvidePlugin({
