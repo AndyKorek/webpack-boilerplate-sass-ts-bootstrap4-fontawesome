@@ -116,25 +116,20 @@ This will:
 │   ├── assets
 │   │   |── data
 │   │   └── images
-│   ├── js
-│   │   ├── _vendor
-|   |   |     |── _bootstrap.js
-│   │   |     └── _fontawesome.js
-│   │   ├── _custom.js
-│   │   ├── _vendor.js
-│   │   └── index.js
-│   ├── _sass
+│   ├── fonts
+│   ├── sass
 │   │   ├── _utils
 |   |   |     ├── _mixins.scss
-|   |   |     └── _variables.scss
-│   │   ├── _vendor
-|   |   |     ├── _animateit.scss
-|   |   |     └── bootstrap.scss
 │   │   ├── _globals.scss
-│   │   ├── _setup.scss
+│   │   ├── _headings.scss
 │   │   ├── _typography.scss
+│   │   ├── _variables.scss
+│   │   ├── _vendor.scss
 │   │   └── main.scss
-│   │
+│   ├── ts
+│   │   ├── custom.ts
+│   │   ├── vendor.ts
+│   │   └── index.ts
 │   └── index.html
 │
 
