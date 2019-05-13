@@ -1,8 +1,13 @@
 {
-  "presets": ["@babel/preset-env"],
+  "presets": [
+    "@babel/preset-env",
+    "@babel/typescript"
+  ],
   "env": {
     "production": {
-      "presets": ["minify"]
+      "presets": [
+        "minify"
+      ]
     }
   }
 }

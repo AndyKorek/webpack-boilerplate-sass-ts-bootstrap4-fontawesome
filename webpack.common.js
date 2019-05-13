@@ -4,21 +4,24 @@ const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const TSLintPlugin = require('tslint-webpack-plugin');
 
 
 const paths = {
     dest: {
         img: 'assets/images/'
     },
-    build: path.resolve(__dirname, 'dist')
+    build: path.resolve(__dirname, 'dist'),
+    nodeModules: '/node_modules/'
 };
 
 module.exports = {
-    entry: {
-        main: './src/js/index.js',
-        vendor: './src/js/_vendor.js',
-        ts: './src/ts/main.ts'
-    },
+    entry:
+        {
+            index: './src/ts/index.ts',
+            vendor: './src/ts/_vendor.ts',
+            custom: './src/ts/custom.ts',
+        },
     output: {
         path: paths.build,
         filename: './js/[name].js',
@@ -70,16 +73,9 @@ module.exports = {
             },
             // Babel Loader
             {
-                test: /\.js$/,
+                test: /\.ts(x?)$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
-            },
-            //  CSV/TSV Loader
-            {
-                test: /\.(csv|tsv)$/,
-                use: [
-                    'csv-loader'
-                ]
             },
             // XML Loader
             {
@@ -88,21 +84,9 @@ module.exports = {
                     'xml-loader'
                 ]
             },
-            {
-                test: /\.ts(x?)$/,
-                exclude: /node_modules/,
-                use: [
-                    'babel-loader',
-                    {
-                    loader: 'ts-loader'
-                    }
-                ]
-            }
         ]
     },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js']
-    },
+    resolve: {extensions: ['.js', '.jsx', '.tsx', '.ts', '.json']},
     plugins: [
         new webpack.ProvidePlugin({
             $: 'jquery',
@@ -116,10 +100,13 @@ module.exports = {
         // Load Lodash Features Separately https://www.npmjs.com/package/lodash-webpack-plugin
         new LodashModuleReplacementPlugin({
             'collections': true,
-            'paths': true
+            'paths': true,
         }),
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'defer'
         }),
+        new TSLintPlugin({
+            files: ['src/ts/*.ts']
+        })
     ]
 };

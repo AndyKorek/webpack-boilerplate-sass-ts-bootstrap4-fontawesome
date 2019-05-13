@@ -1,7 +1,7 @@
 {
   "name": "webpack4-boilerplate",
   "version": "1.5.0",
-  "main": "src/js/index.js",
+  "main": "src/ts/index.ts",
   "repository": "git@github.com:AndyKorek/webpack4_boilerplate.git",
   "author": "Andy K.",
   "license": "MIT",
@@ -13,6 +13,7 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "@types/bootstrap": "^4.3.0",
     "animate.css": "^3.7.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.3.1",
@@ -22,20 +23,19 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@babel/preset-typescript": "^7.3.3",
     "@fortawesome/fontawesome-free": "^5.7.1",
     "@fullhuman/postcss-purgecss": "^1.1.0",
     "@types/lodash": "^4.14.126",
     "autoprefixer": "^9.4.10",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
-    "babel-plugin-lodash": "^3.3.4",
     "babel-preset-minify": "^0.5.0",
     "browserlist": "^1.0.1",
     "clean-webpack-plugin": "^2.0.0",
     "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
     "cssnano": "^4.1.10",
-    "csv-loader": "^3.0.2",
     "eslint": "^5.15.1",
     "eslint-config-google": "^0.9.1",
     "eslint-loader": "^2.1.2",
@@ -56,9 +56,12 @@
     "preload-webpack-plugin": "^2.3.0",
     "sass-loader": "^6.0.7",
     "script-ext-html-webpack-plugin": "^2.1.3",
+    "source-map-loader": "^0.2.4",
     "style-loader": "^0.20.3",
     "terser-webpack-plugin": "^1.2.3",
     "ts-loader": "^6.0.0",
+    "tslint": "^5.16.0",
+    "tslint-webpack-plugin": "^2.0.4",
     "typescript": "^3.4.5",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.6",
@@ -76,7 +79,7 @@
     "livereload",
     "dev-server",
     "font-awesome",
-    "material icons",
-    "es-lint"
+    "es-lint",
+    "typescript"
   ]
 }

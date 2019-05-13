@@ -6,6 +6,8 @@
                 <a href="https://babeljs.io/"><img alt="Webpack" src="https://img.shields.io/badge/Babel%2FCore-7.3.4-%23f5da55.svg"></a>
                 <a href="https://www.npmjs.com/package/gulp-sass"><img alt="node-sass" src="https://img.shields.io/badge/node--sass-v4.11.0-ff69b4.svg"></a>
                 <a href="https://jquery.com/"><img src="https://img.shields.io/badge/jQuery-3.3.1-blue.svg" alt="jquery"></a>
+                <a href="https://lodash.com/"><img src="https://img.shields.io/badge/lodash-4.17.11-blue.svg" alt="jquery"></a>
+                <a href="https://popper.js.org/"><img src="https://img.shields.io/badge/popper.js-1.14.7-blue.svg" alt="popper.js"></a>
                 <a href="https://eslint.org/"><img src="https://img.shields.io/badge/es--lint-4.19.1-%23463fd4.svg" alt="eslint"><a/>
                 <a href="https://fontawesome.com/"><img alt="node-sass" src="https://img.shields.io/badge/Font--Awesome-5.7.1-blue.svg"></a>
 </p>
@@ -29,6 +31,7 @@
 This Webpack4-Sass Boilerplate contains the following features:
 
 - Webpack4 & Dev-Server
+- TypeScript 3.4.5
 - Babel ES6 Compiler
 - Bootstrap v4
 - Font Awesome v5.7
@@ -49,6 +52,7 @@ This project contains the following loaders & plugins:
 - `node-sass` for compiling sass (SCSS)
 - `babel-loader` for compiling ES6 code
 - `babel-eslint && eslint-loader` for Linting your .js
+- `tslint` for Linting your .ts 
 - `lodash-webpack-plugin` create smaller Lodash builds by replacing feature sets of modules with noop, identity, or simpler alternatives.
 - `webpack-dev-server` for serving & Hot-Reloading
 - `css-loader` for compressing css
