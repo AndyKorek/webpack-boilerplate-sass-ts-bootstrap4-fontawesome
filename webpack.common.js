@@ -1,31 +1,31 @@
 // Common Config is used in Development and Production Mode.
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+
+// Linting
 const TSLintPlugin = require('tslint-webpack-plugin');
 
-
-const paths = {
-    dest: {
-        img: 'assets/images/'
-    },
-    build: path.resolve(__dirname, 'dist'),
-    nodeModules: '/node_modules/'
-};
-
 module.exports = {
-    entry:
-        {
-            index: './src/ts/index.ts',
-        },
+    entry: {
+        index: './src/index.ts'
+    },
     output: {
-        path: paths.build,
-        filename: './js/[name].js',
+        path: path.resolve(__dirname, 'dist'),
+        filename: './js/[name].[chunkhash:8].js'
     },
     module: {
         rules: [
+            // Raw Loader
+            {
+                test: /\.txt$/,
+                use: 'raw-loader'
+            },
             //  HTML Loader
             {
                 test: /\.html$/,
@@ -36,6 +36,31 @@ module.exports = {
                     }
                 ]
             },
+            //  CSS/SCSS Loader & Minimizer
+            {
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ],
+            },
             // Image Loader
             {
                 test: /\.(png|jpeg|jpg|webp|gif|ico|svg)/i,
@@ -43,8 +68,8 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            publicPath: '../',
-                            name: paths.dest.img + '[name].[ext]',
+                           // publicPath: '../',
+                            name: './assets/images/' + '[name].[ext]',
                             limit: 10000,
                         }
 
@@ -52,15 +77,16 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        name: 'fonts/[name].[hash:6].[ext]',
-                        publicPath: '../',
-                        limit: 8192,
-                    }
-                }]
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            name: './fonts/[name].[hash:6].[ext]',
+                            publicPath: '../',
+                            limit: 8192 },
+                    },
+                ],
             },
             //  Babel esLint
             {
@@ -86,25 +112,36 @@ module.exports = {
     },
     resolve: {extensions: ['.js', '.jsx', '.tsx', '.ts', '.json']},
     plugins: [
+        new CleanWebpackPlugin(),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
         }),
-        new HtmlWebPackPlugin({
-            template: 'src/index.html',
-            filename: './index.html',
-            inject: 'head'
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].[contenthash].css',
         }),
-        // Load Lodash Features Separately https://www.npmjs.com/package/lodash-webpack-plugin
-        new LodashModuleReplacementPlugin({
-            'collections': true,
-            'paths': true,
+        new HtmlWebPackPlugin({
+            title: 'webpack4 Boilerplate',
+            template: './src/index.html',
+            filename: 'index.html',
+            inject: 'body'
+        }),
+        new HtmlWebPackPlugin({
+            title: 'tris-404-page',
+            filename: '404.html',
+            template: './src/404.html',
+            inject: 'body'
         }),
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'defer'
         }),
+        // // Load Lodash Features Separately https://www.npmjs.com/package/lodash-webpack-plugin
+        new LodashModuleReplacementPlugin({
+            'collections': true,
+            'paths': true,
+        }),
         new TSLintPlugin({
             files: ['src/ts/*.ts']
         })
-    ]
+    ],
 };

@@ -2,14 +2,22 @@
 @import "vendor";
 
 //! utilities / helpers
-@import "variables";
-@import "_utils/mixins";
+@import "utils/mixins";
+@import "utils/variables";
+
+//! setup
+@import "setup/normalize";    // normalize browsers to make more consistent
+@import "setup/clearfix";     // clearfix for floats
+@import "setup/border-box";   // global border-box setting
 
 //! Gloabal _base Styles
 @import "typography";
 @import "globals";
-@import "_headings.scss";
+@import "headings";
 
+// Layout
+@import "layout/features";
+@import "layout/demo_index";
 
 footer {
   background-color: darkslateblue;
@@ -32,32 +40,14 @@ span {
 }
 
 
-.features:hover {
-  cursor: pointer;
-
-  animation: jello-horizontal 1.2s ;
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
 }
 
-@keyframes jello-horizontal {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
+.test-labelle {
+  font-family: $font-family-la-belle-cursiv;
+  font-weight: 400;
 }

@@ -1,8 +1,8 @@
 // Font Awesome 5 (Free)
 import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid'; // https://fontawesome.com/icons?d=gallery&s=solid&m=free
-import '@fortawesome/fontawesome-free/js/regular'; // https://fontawesome.com/icons?d=gallery&s=regular&m=free
-import '@fortawesome/fontawesome-free/js/brands'; // https://fontawesome.com/icons?d=gallery&s=brands&m=free
+import '@fortawesome/fontawesome-free/js/regular';
+// import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/brands';
 
 // Bootstrap ||  Uncomment to load Features individually
 
@@ -20,10 +20,6 @@ import '@fortawesome/fontawesome-free/js/brands'; // https://fontawesome.com/ico
 
 
 //  ||  Load everything
-import 'bootstrap';
-
-// Lodash
-import * as _ from 'lodash';
-
-console.log('Lodash Version', _.VERSION);
+// import 'bootstrap';
+import 'materialize-css/dist/js/materialize';
 

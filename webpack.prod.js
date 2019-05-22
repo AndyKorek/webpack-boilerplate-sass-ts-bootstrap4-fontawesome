@@ -1,74 +1,83 @@
+// Merges webpack.common config with this production config
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+
 const webpack = require('webpack');
-const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+// Optimisations and Compression
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
+
+// Optional
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
-const paths = {
-    dest: {
-        img: 'assets/images/'
-    },
-    build: path.resolve(__dirname, 'dist')
-};
 
 module.exports = merge(common, {
     mode: 'production',
     devtool: 'source-map',
-    output: {
-        path: paths.build,
-        filename: './js/[name].[contenthash].js',
-    },
-    module: {
-        rules: [
-            //  CSS/SCSS Loader & Minimizer
-            {
-                test: /\.(sa|sc|c)ss$/,
-                use: [
-                    'style-loader',
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true
-                        }
+    optimization: {
+        minimizer: [
+            new TerserPlugin({
+                test: /\.js(\?.*)?$/i,
+                exclude: /node_modules/,
+                cache: true,
+                parallel: 4,
+                sourceMap: true,
+            }),
+            new OptimizeCSSAssetsPlugin({})
+        ],
+        runtimeChunk: 'single',
+        splitChunks: {
+            chunks: 'all',
+            maxInitialRequests: Infinity,
+            minSize: 0,
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name(module) {
+                        // eslint-disable-next-line max-len
+                        const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+                        return `npm.${packageName.replace('@', '')}`;
                     },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    }
-                ],
-            }
-        ]
+                },
+            },
+        },
     },
     plugins: [
         new CleanWebpackPlugin(),
+        new CompressionPlugin({
+            // only compressed html/css/js, skips compressing sourcemaps etc
+            filename: '[path].br[query]',
+            algorithm: 'gzip',
+            test: /\.(js|css|html|svg)$/,
+            compressionOptions: {level: 9},
+            threshold: 10240,
+            minRatio: 0.8,
+            deleteOriginalAssets: false,
+            cache: './dist/cache'
+
+        }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash].css',
         }),
         new webpack.HashedModuleIdsPlugin(),
         new ImageminPlugin({
             test: /\.(jpe?g|png|gif|svg)$/i,
-            gifsicle: { // lossless gif compressor
+            // lossLess gif compressor
+            gifsicle: {
                 optimizationLevel: 9
             },
-            pngquant: ({ // lossy png compressor, remove for default lossless
+            // lossy png compressor, remove for default lossLess
+            pngquant: ({
                 quality: '75'
             }),
-            plugins: [imageminMozjpeg({ // lossy jpg compressor
+            // lossy jpg compressor
+            plugins: [imageminMozjpeg({
                 quality: '75'
             })]
         }),
@@ -88,47 +97,14 @@ module.exports = merge(common, {
             inject: true,
             // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
             background: '#fff',
-            // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
-            title: 'Sample App',
-
             // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
             icons: {
                 android: true,
                 appleIcon: true,
-                appleStartup: true,
-                coast: false,
                 favicons: true,
                 firefox: true,
-                opengraph: false,
-                twitter: false,
-                yandex: false,
                 windows: false
             }
-        })
-    ],
-    optimization: {
-        runtimeChunk: 'single',
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendors',
-                    chunks: 'all'
-                }
-            }
-        },
-        minimizer: [
-            new TerserPlugin({
-                cache: true,
-                parallel: 4,
-                sourceMap: true,
-                terserOptions: {
-                    test: /\.js(\?.*)?$/i,
-                    exclude: /node_modules/,
-                }
-            }),
-            new OptimizeCSSAssetsPlugin({})
-        ],
-    },
+        }),
+    ]
 });
-
