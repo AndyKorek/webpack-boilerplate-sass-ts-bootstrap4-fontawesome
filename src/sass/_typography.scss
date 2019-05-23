@@ -13,9 +13,7 @@ $font-heading: 'Roboto', Fallback, 'Georgia', serif;
 $font-body: sans-serif;
 
 
-
 // Font Faces
-
 /* roboto-300 - latin */
 @font-face {
   font-family: 'Roboto';
@@ -86,6 +84,8 @@ $font-body: sans-serif;
   url('../fonts/la-belle-aurore-v9-latin-regular.ttf') format('truetype') /* Safari, Android, iOS */
 }
 
+// Comment of if u dont need it
+// Material Icons Start
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -121,7 +121,7 @@ $font-body: sans-serif;
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
-
+// Material Icons End
 
 html {
   font-size: 62.5%; //1rem = 10px, 3.5rem = 35px

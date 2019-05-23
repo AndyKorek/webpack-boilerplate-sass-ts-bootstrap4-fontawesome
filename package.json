@@ -32,6 +32,7 @@
     "@fortawesome/fontawesome-free": "^5.7.1",
     "@fullhuman/postcss-purgecss": "^1.1.0",
     "@types/lodash": "^4.14.126",
+    "@types/materialize-css": "^1.0.6",
     "autoprefixer": "^9.4.10",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",

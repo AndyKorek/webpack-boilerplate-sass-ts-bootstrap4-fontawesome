@@ -51,3 +51,22 @@ span {
   font-family: $font-family-la-belle-cursiv;
   font-weight: 400;
 }
+
+html, body, .block {
+  height: 100%;
+}
+
+// Class for when element is above threshold
+.pin-top {
+  position: relative;
+}
+
+// Class for when element is below threshold
+.pin-bottom {
+  position: relative;
+}
+
+// Class for when element is pinned
+.pinned {
+  position: fixed !important;
+}
