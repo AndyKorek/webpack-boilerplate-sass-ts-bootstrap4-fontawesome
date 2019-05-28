@@ -1,15 +1,7 @@
-const purgecss = require('@fullhuman/postcss-purgecss');
-
-
 module.exports = {
     plugins: [
-        require('autoprefixer'),
-        require('cssnano')({
-            preset: 'default',
-        }),
-        purgecss({
-            content: ['./**/*.html'],
-            keyframes: true
+        require('autoprefixer')({
+            'browsers': ['> 1%', 'last 2 versions']
         })
     ]
-}
+};
