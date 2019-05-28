@@ -118,7 +118,7 @@ module.exports = {
             jQuery: 'jquery'
         }),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].[contenthash].css',
+            filename: 'css/[name].css',
         }),
         new HtmlWebPackPlugin({
             title: 'webpack4 Boilerplate',
