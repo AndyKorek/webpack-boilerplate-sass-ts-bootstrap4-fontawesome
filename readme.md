@@ -33,7 +33,7 @@ This Webpack4-Sass Boilerplate contains the following features:
 - Webpack4 & Dev-Server
 - TypeScript 3.4.5
 - Babel ES6 Compiler
-- Bootstrap v4
+- Bootstrap v4 - with Theme Support
 - Font Awesome v5.7
 - Animate.css Library v3.7.0
 - JQuery v3.3.1
@@ -80,10 +80,9 @@ Make sure these are installed first.
 ### Quick Start
 
 1. Clone the repo :
-      `git clone https://github.com/AndyKorek/Webpack4_Boilerplate.git
-     `
-2. In bash/terminal/command line, `cd webpack4_boilerplate` into project directory.
-3. Run `npm i` to install required files and dependencies.
+      `git clone https://github.com/AndyKorek/webpack-boilerplate-sass-ts-bootstrap4-fontawesome.git`
+2. In bash/terminal/command line, `cd ` into project directory.
+3. Run `npm i` to install required dependencies.
 
 4. Run the Dev Server with (with Hot Reloading) `npm run dev`
 
@@ -98,6 +97,7 @@ This will:
 - Bundle and Minify JS
 - Optimize Images
 - Optimize HTML
+- generate Favicons
 
 <hr/>
 
@@ -114,24 +114,33 @@ This will:
 
 ├── src
 │   ├── assets
-│   │   |── data
 │   │   └── images
 │   ├── fonts
 │   ├── sass
-│   │   ├── _utils
+│   │   ├── layout
+|   |   |     └── _features.scss
+│   │   ├── setup
+|   |   |     ├── _clearfix.scss
+|   |   |     └── _normalize.scss
+│   │   ├── themes
+|   |   |     ├── _slate.scss
+|   |   |     └── _yeti.scss
+│   │   ├── utils
 |   |   |     ├── _mixins.scss
+|   |   |     └── _variables.scss
 │   │   ├── _globals.scss
 │   │   ├── _headings.scss
 │   │   ├── _typography.scss
-│   │   ├── _variables.scss
 │   │   ├── _vendor.scss
 │   │   └── main.scss
 │   ├── ts
 │   │   ├── custom.ts
 │   │   ├── vendor.ts
-│   │   └── index.ts
-│   └── index.html
-│
+│   |── .htaccess
+│   |── 404.html
+│   |── index.html
+│   └── index.ts
+
 
 
 

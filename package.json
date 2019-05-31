@@ -2,7 +2,7 @@
   "name": "webpack4-boilerplate",
   "version": "1.5.0",
   "main": "src/index.ts",
-  "repository": "git@github.com:AndyKorek/webpack4_boilerplate.git",
+  "repository": "git@github.com:AndyKorek/webpack-boilerplate-sass-ts-bootstrap4-fontawesome.git",
   "author": "Andy K.",
   "license": "MIT",
   "scripts": {
