@@ -63,7 +63,7 @@ module.exports = merge(common, {
 
         }),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].[contenthash].css',
+            filename: 'css/[name].[hash:6].css',
         }),
         new webpack.HashedModuleIdsPlugin(),
         new ImageminPlugin({

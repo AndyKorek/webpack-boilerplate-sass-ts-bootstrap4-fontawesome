@@ -17,7 +17,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: './js/[name].[chunkhash:8].js'
+        filename: './js/[name].[hash:6].js'
     },
     module: {
         rules: [
@@ -118,7 +118,7 @@ module.exports = {
             jQuery: 'jquery'
         }),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
+            filename: 'css/[name].[hash:6].css',
         }),
         new HtmlWebPackPlugin({
             title: 'webpack4 Boilerplate',
