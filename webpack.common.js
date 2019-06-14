@@ -7,7 +7,6 @@ const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
 // Linting
 const TSLintPlugin = require('tslint-webpack-plugin');
 
@@ -71,6 +70,7 @@ module.exports = {
                            // publicPath: '../',
                             name: './assets/images/' + '[name].[ext]',
                             limit: 10000,
+                            publicPath: '../'
                         }
 
                     },

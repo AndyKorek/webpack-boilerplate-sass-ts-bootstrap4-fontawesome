@@ -36,16 +36,6 @@ module.exports = merge(common, {
             chunks: 'all',
             maxInitialRequests: Infinity,
             minSize: 0,
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name(module) {
-                        // eslint-disable-next-line max-len
-                        const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-                        return `npm.${packageName.replace('@', '')}`;
-                    },
-                },
-            },
         },
     },
     plugins: [
