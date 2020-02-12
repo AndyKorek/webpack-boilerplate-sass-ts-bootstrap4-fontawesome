@@ -1,28 +1,73 @@
-@import '../../node_modules/animate.css/animate.css';
-@import "bootstrap";
-@import "bootstrap_material";
-@import "fonts";
-@import "variables";
+//! Themes
+@import "themes/slate";
+// @import "themes/yeti";
 
+//! Vendors !//
+@import "vendor";
 
-html, body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  height: 100%;
-}
+//! Global _base Styles
+@import "typography";
+@import "globals";
+@import "headings";
 
-html {
-  height: 100%;
+//! utilities / helpers
+@import "utils/mixins";
+@import "utils/variables";
 
-}
+//! setup
+@import "setup/normalize";  // normalize browsers to make more consistent
 
-body {
-  background-color: white;
-  color: black;
-}
+// Layout
+@import "layout/features";
 
 footer {
-  background-color: darkslateblue;
+  background-color: $primary;
   color: $color-black;
+  font-family: $font-family-roboto-sans-serif;
+}
+
+.nav-link {
+  font-family: $font-family-roboto-mono;
+}
+
+.features-p {
+  max-width: 85vh;
+  margin: 0 auto;
+}
+
+span {
+  margin: .6em;
+  display: inline-block;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.test-labelle {
+  font-family: $font-family-la-belle-cursiv;
+  font-weight: 400;
+}
+
+html, body, .block {
+  height: 100%;
+}
+
+// Class for when element is above threshold
+.pin-top {
+  position: relative;
+}
+
+// Class for when element is below threshold
+.pin-bottom {
+  position: relative;
+}
+
+// Class for when element is pinned
+.pinned {
+  position: fixed !important;
 }

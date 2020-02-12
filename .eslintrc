@@ -7,7 +7,15 @@
     }
   },
   "rules": {
+    "no-tabs": "off",
     "semi": 0,
-    "comma-dangle": 0
+    "comma-dangle": 0,
+    "require-jsdoc": [2, {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": false,
+        "ClassDeclaration": false,
+      }
+    }]
   }
 }
