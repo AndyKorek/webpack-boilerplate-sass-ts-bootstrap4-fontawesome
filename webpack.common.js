@@ -12,11 +12,12 @@ const TSLintPlugin = require('tslint-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './src/index.ts'
+        index: './src/index.ts',
+        custom: './src/ts/custom.ts'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: './js/[name].[hash:6].js'
+        filename: './js/[name].[hash:6].bundle.js'
     },
     module: {
         rules: [
@@ -124,13 +125,15 @@ module.exports = {
             title: 'webpack4 Boilerplate',
             template: './src/index.html',
             filename: 'index.html',
-            inject: 'body'
+            inject: 'body',
+            minify: false,
         }),
         new HtmlWebPackPlugin({
             title: 'tris-404-page',
             filename: '404.html',
             template: './src/404.html',
-            inject: 'body'
+            inject: 'body',
+            minify: false
         }),
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'defer'

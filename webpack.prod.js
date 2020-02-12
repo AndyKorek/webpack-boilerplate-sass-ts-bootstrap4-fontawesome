@@ -13,13 +13,13 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
+
 // Optional
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 
 module.exports = merge(common, {
     mode: 'production',
-    devtool: 'source-map',
     optimization: {
         minimizer: [
             new TerserPlugin({
@@ -34,28 +34,29 @@ module.exports = merge(common, {
         runtimeChunk: 'single',
         splitChunks: {
             chunks: 'all',
-            maxInitialRequests: Infinity,
-            minSize: 0,
+            // maxInitialRequests: Infinity,
+            // minSize: 0,
+            cacheGroups: {
+                vendor: {
+                    test: /node_modules/, // you may add "vendor.js" here if you want to
+                    name: "node-modules",
+                    chunks: "initial",
+                    enforce: true
+                },
+            }
         },
     },
     plugins: [
         new CleanWebpackPlugin(),
         new CompressionPlugin({
-            // only compressed html/css/js, skips compressing sourcemaps etc
-            filename: '[path].br[query]',
-            algorithm: 'gzip',
             test: /\.(js|css|html|svg)$/,
-            compressionOptions: {level: 9},
+            filename: '[path].br[query]',
+            algorithm: 'brotliCompress',
+            compressionOptions: { level: 11 },
             threshold: 10240,
             minRatio: 0.8,
-            deleteOriginalAssets: false,
-            cache: './dist/cache'
-
+            deleteOriginalAssets: false
         }),
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].[hash:6].css',
-        }),
-        new webpack.HashedModuleIdsPlugin(),
         new ImageminPlugin({
             test: /\.(jpe?g|png|gif|svg)$/i,
             // lossLess gif compressor

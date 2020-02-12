@@ -5,7 +5,7 @@
 //! Vendors !//
 @import "vendor";
 
-//! Gloabal _base Styles
+//! Global _base Styles
 @import "typography";
 @import "globals";
 @import "headings";
@@ -16,7 +16,6 @@
 
 //! setup
 @import "setup/normalize";  // normalize browsers to make more consistent
-@import "setup/clearfix";   // clearfix for floats
 
 // Layout
 @import "layout/features";

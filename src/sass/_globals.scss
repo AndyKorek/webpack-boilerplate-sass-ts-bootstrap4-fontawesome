@@ -1,13 +1,19 @@
+@import "utils/variables";
+
 
 html, body {
   height: 100%;
 }
 
+html {
+  font-size: 62.5%; //1rem = 10px, 3.5rem = 35px
+}
+
 body {
-  width: 100%;
-  min-height: 100%;
-  margin: 0;
-  background-color: white;
+  font-family: $font-family-roboto-sans-serif;
+  font-size: 1.6rem;
+  background: white;
+  color: #0d0d0d;
 }
 
 .wrapper {
@@ -36,3 +42,27 @@ ul {
   list-style: none;
 }
 
+.material-icons {
+  font-family: 'Material Icons', serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

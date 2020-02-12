@@ -1,15 +1,15 @@
 <h2 align="center">Boilerplate - Bootstrap v4 - SASS - JQuery - WebPack</h2>
 
 <p align="center">    
-<a href="http://getbootstrap.com/"><img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-v4.3.1-563d7c.svg"></a>
-                <a href="https://webpack.js.org/"><img alt="Webpack" src="https://img.shields.io/badge/Webpack-4.29.6-%238DD6F9.svg"></a>
-                <a href="https://babeljs.io/"><img alt="Webpack" src="https://img.shields.io/badge/Babel%2FCore-7.3.4-%23f5da55.svg"></a>
-                <a href="https://www.npmjs.com/package/gulp-sass"><img alt="node-sass" src="https://img.shields.io/badge/node--sass-v4.11.0-ff69b4.svg"></a>
+<a href="http://getbootstrap.com/"><img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-v4.4.1-563d7c.svg"></a>
+                <a href="https://webpack.js.org/"><img alt="Webpack" src="https://img.shields.io/badge/Webpack-4.41.6-%238DD6F9.svg"></a>
+                <a href="https://babeljs.io/"><img alt="Webpack" src="https://img.shields.io/badge/Babel%2FCore-7.8.4-%23f5da55.svg"></a>
+                <a href="https://www.npmjs.com/package/gulp-sass"><img alt="node-sass" src="https://img.shields.io/badge/node--sass-v4.13.1-ff69b4.svg"></a>
                 <a href="https://jquery.com/"><img src="https://img.shields.io/badge/jQuery-3.3.1-blue.svg" alt="jquery"></a>
-                <a href="https://lodash.com/"><img src="https://img.shields.io/badge/lodash-4.17.11-blue.svg" alt="jquery"></a>
-                <a href="https://popper.js.org/"><img src="https://img.shields.io/badge/popper.js-1.14.7-blue.svg" alt="popper.js"></a>
-                <a href="https://eslint.org/"><img src="https://img.shields.io/badge/es--lint-4.19.1-%23463fd4.svg" alt="eslint"><a/>
-                <a href="https://fontawesome.com/"><img alt="node-sass" src="https://img.shields.io/badge/Font--Awesome-5.7.1-blue.svg"></a>
+                <a href="https://lodash.com/"><img src="https://img.shields.io/badge/lodash-4.17.15-blue.svg" alt="jquery"></a>
+                <a href="https://popper.js.org/"><img src="https://img.shields.io/badge/popper.js-2.0.6-blue.svg" alt="popper.js"></a>
+                <a href="https://eslint.org/"><img src="https://img.shields.io/badge/es--lint-5.15.1-%23463fd4.svg" alt="eslint"></a>
+                <a href="https://fontawesome.com/"><img alt="node-sass" src="https://img.shields.io/badge/Font--Awesome-5.12.1-blue.svg"></a>
 </p>
 
 ![bootstrap logo](https://abload.de/img/bootstrap-logo-vector78khf.png)
@@ -31,13 +31,13 @@
 This Webpack4-Sass Boilerplate contains the following features:
 
 - Webpack4 & Dev-Server
-- TypeScript 3.4.5
+- TypeScript 3.7.5
 - Babel ES6 Compiler
 - Bootstrap v4 - with Theme Support
 - Font Awesome v5.7
-- Animate.css Library v3.7.0
+- Animate.css Library v3.7.2
 - JQuery v3.3.1
-- PopperJS
+- PopperJS v2
 - lodash
 - concentrate and minify JavaScript.
 - Compile, minify, autoprefix SASS.
@@ -120,7 +120,6 @@ This will:
 │   │   ├── layout
 |   |   |     └── _features.scss
 │   │   ├── setup
-|   |   |     ├── _clearfix.scss
 |   |   |     └── _normalize.scss
 │   │   ├── themes
 |   |   |     ├── _slate.scss
@@ -140,7 +139,6 @@ This will:
 │   |── 404.html
 │   |── index.html
 │   └── index.ts
-
 
 
 
@@ -185,7 +183,7 @@ put your custom js to `src/js/_custom.js`
 - [x] Bootstrap 4
 - [x] Webpack 4
 - [x] Jquery
-- [x] PopperJS
+- [x] PopperJS v2
 - [x] Include ES-Lint
 - [x] Font-Awesome
 - [x] Assets Loader
