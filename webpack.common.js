@@ -13,7 +13,8 @@ const TSLintPlugin = require('tslint-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/index.ts',
-        custom: './src/ts/custom.ts'
+        custom: './src/ts/custom.ts',
+        vendor: './src/ts/vendor.ts'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
