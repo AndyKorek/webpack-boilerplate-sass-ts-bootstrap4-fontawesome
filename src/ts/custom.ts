@@ -1,1 +1,1 @@
-console.log('HEllo From Cusom TS');
+console.log('Hello From Custom TS');
