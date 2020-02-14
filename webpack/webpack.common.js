@@ -6,6 +6,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
+
 
 // Linting
 const TSLintPlugin = require('tslint-webpack-plugin');
@@ -13,8 +15,10 @@ const TSLintPlugin = require('tslint-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/index.ts',
+        lineAwesome: './src/ts/line-awesome.ts',
+        vendor: './src/ts/vendor.ts',
         custom: './src/ts/custom.ts',
-        vendor: './src/ts/vendor.ts'
+
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -55,9 +59,15 @@ module.exports = {
                         }
                     },
                     {
+                        loader: 'resolve-url-loader',
+                        options: {}
+                    },
+                    {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: true
+                            sourceMap: true,
+                            sourceMapContents: false
+
                         }
                     }
                 ],
@@ -95,7 +105,7 @@ module.exports = {
                 enforce: 'pre',
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'eslint-loader'
+                loader: 'eslint-loader',
             },
             // Babel Loader
             {
@@ -114,13 +124,10 @@ module.exports = {
     },
     resolve: {extensions: ['.js', '.jsx', '.tsx', '.ts', '.json']},
     plugins: [
-        new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
-        }),
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].[hash:6].css',
         }),
         new HtmlWebPackPlugin({
             title: 'webpack4 Boilerplate',
@@ -145,7 +152,15 @@ module.exports = {
             'paths': true,
         }),
         new TSLintPlugin({
-            files: ['src/ts/*.ts']
+            files: ['./src/ts/*.ts']
+        }),
+        new StylelintPlugin( {
+            files: ['./src/sass/*.s?(a|c)ss'],
+            configFile: './config/.stylelintrc',
+            emitError: true,
+            emitWarning: true,
+            failOnError: false,
+            fix: true
         })
     ],
 };

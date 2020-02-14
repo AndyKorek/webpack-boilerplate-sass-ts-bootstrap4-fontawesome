@@ -7,81 +7,49 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'),
+  src: local('Roboto Light'),
+  local('Roboto-Light'),
   url('../fonts/roboto-v19-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
   url('../fonts/roboto-v19-latin-300.woff') format('woff'), /* Modern Browsers */
   url('../fonts/roboto-v19-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
   url('../fonts/roboto-v19-latin-300.svg#Roboto') format('svg'); /* Legacy iOS */
 }
+
 /* roboto-regular - latin */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'),
+  src: local('Roboto'),
+  local('Roboto-Regular'),
   url('../fonts/roboto-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
   url('../fonts/roboto-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
   url('../fonts/roboto-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
   url('../fonts/roboto-v19-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
 }
+
 /* roboto-500 - latin */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'),
+  src: local('Roboto Medium'),
+  local('Roboto-Medium'),
   url('../fonts/roboto-v19-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
   url('../fonts/roboto-v19-latin-500.woff') format('woff'), /* Modern Browsers */
   url('../fonts/roboto-v19-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
   url('../fonts/roboto-v19-latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
 }
+
 /* roboto-700 - latin */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'),
+  src: local('Roboto Bold'),
+  local('Roboto-Bold'),
   url('../fonts/roboto-v19-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
   url('../fonts/roboto-v19-latin-700.woff') format('woff'), /* Modern Browsers */
   url('../fonts/roboto-v19-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
   url('../fonts/roboto-v19-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
 }
-
-/* roboto-mono-regular - latin */
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Roboto Mono'), local('RobotoMono-Regular'),
-  url('../fonts/roboto-mono-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/roboto-mono-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/roboto-mono-v6-latin-regular.ttf') format('truetype') /* Safari, Android, iOS */
-}
-
-/* la-belle-aurore-regular - latin */
-@font-face {
-  font-family: 'La Belle Aurore';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('La Belle Aurore'),
-  local('LaBelleAurore'),
-  url('../fonts/la-belle-aurore-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/la-belle-aurore-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/la-belle-aurore-v9-latin-regular.ttf') format('truetype') /* Safari, Android, iOS */
-}
-
-// Comment of if u dont need it
-// Material Icons Start
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Material Icons'),
-  local('MaterialIcons-Regular'),
-  url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),
-  url('../fonts/MaterialIcons-Regular.woff') format('woff'),
-  url('../fonts/MaterialIcons-Regular.ttf') format('truetype');
-}
-

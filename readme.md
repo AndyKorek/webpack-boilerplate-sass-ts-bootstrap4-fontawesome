@@ -1,21 +1,22 @@
 <h2 align="center">Boilerplate - Bootstrap v4 - SASS - JQuery - WebPack</h2>
 
 <p align="center">    
-<a href="http://getbootstrap.com/"><img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-v4.4.1-563d7c.svg"></a>
-                <a href="https://webpack.js.org/"><img alt="Webpack" src="https://img.shields.io/badge/Webpack-4.41.6-%238DD6F9.svg"></a>
+            <a href="https://webpack.js.org/"><img alt="Webpack" src="https://img.shields.io/badge/Webpack-4.41.6-%238DD6F9.svg"></a>
                 <a href="https://babeljs.io/"><img alt="Webpack" src="https://img.shields.io/badge/Babel%2FCore-7.8.4-%23f5da55.svg"></a>
                 <a href="https://www.npmjs.com/package/gulp-sass"><img alt="node-sass" src="https://img.shields.io/badge/node--sass-v4.13.1-ff69b4.svg"></a>
                 <a href="https://jquery.com/"><img src="https://img.shields.io/badge/jQuery-3.3.1-blue.svg" alt="jquery"></a>
                 <a href="https://lodash.com/"><img src="https://img.shields.io/badge/lodash-4.17.15-blue.svg" alt="jquery"></a>
                 <a href="https://popper.js.org/"><img src="https://img.shields.io/badge/popper.js-2.0.6-blue.svg" alt="popper.js"></a>
                 <a href="https://eslint.org/"><img src="https://img.shields.io/badge/es--lint-5.15.1-%23463fd4.svg" alt="eslint"></a>
-                <a href="https://fontawesome.com/"><img alt="node-sass" src="https://img.shields.io/badge/Font--Awesome-5.12.1-blue.svg"></a>
+                <a href="https://fontawesome.com/"><img alt="Font Awesome" src="https://img.shields.io/badge/Font--Awesome-5.12.1-blue.svg"></a>
+                <a href="https://icons8.com/line-awesome"><img alt="Line Awesome" src="https://img.shields.io/badge/Line%20Awesome-1.3.0-green"></a>
 </p>
 
+![webpack logo](https://abload.de/img/webpack1tkeb.png)
 ![bootstrap logo](https://abload.de/img/bootstrap-logo-vector78khf.png)
 ![babel logo](https://abload.de/img/2000px-babel_logo.svgrzkxw.png)
-![webpack logo](https://abload.de/img/webpack1tkeb.png)
 ![sass logo](https://abload.de/img/1280px-sass_logo_colo0bjb4.png)
+
 
 <p align="center">
   <em>
@@ -38,10 +39,12 @@ This Webpack4-Sass Boilerplate contains the following features:
 - Animate.css Library v3.7.2
 - JQuery v3.3.1
 - PopperJS v2
-- lodash
+- _lodash
 - concentrate and minify JavaScript.
-- Compile, minify, autoprefix SASS.
+- Compile, minify, Autoprefix SASS.
 - Optimize and Cache Images
+- Preconfigured BootsWatch Template (YETI & Slate)
+- Linting for your TS, JS and SASS
 
 ## Features
 
@@ -93,7 +96,8 @@ Make sure these are installed first.
 
 This will:
 
-- Bundle and Minify SASS(scss) to css
+- Bundle and Minify SASS(scss) to css & Hash and Cash it
+- generate GZip and Brodli Compressed Assets
 - Bundle and Minify JS
 - Optimize Images
 - Optimize HTML
@@ -134,6 +138,7 @@ This will:
 │   │   └── main.scss
 │   ├── ts
 │   │   ├── custom.ts
+│   │   ├── line-awesome.ts
 │   │   ├── vendor.ts
 │   |── .htaccess
 │   |── 404.html

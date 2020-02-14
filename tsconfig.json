@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": { "*": ["types/*"] },
     "outDir": "./dist/",
     "noImplicitAny": true,
@@ -11,6 +11,6 @@
     "allowJs": true
   },
   "exclude": [
-    "node_modules"
+    "./node_modules"
   ]
 }

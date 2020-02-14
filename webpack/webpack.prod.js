@@ -57,6 +57,18 @@ module.exports = merge(common, {
             minRatio: 0.8,
             deleteOriginalAssets: false
         }),
+        new CompressionPlugin({
+            filename: '[path].gz[query]',
+            algorithm: 'gzip',
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.8,
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].[hash:6].css',
+            chunkFilename: 'css/[name].[contenthash].css',
+
+        }),
         new ImageminPlugin({
             test: /\.(jpe?g|png|gif|svg)$/i,
             // lossLess gif compressor
