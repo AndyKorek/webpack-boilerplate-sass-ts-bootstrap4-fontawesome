@@ -55,9 +55,15 @@ module.exports = {
                         }
                     },
                     {
+                        loader: 'resolve-url-loader',
+                        options: {}
+                    },
+                    {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: true
+                            sourceMap: true,
+                            sourceMapContents: false
+
                         }
                     }
                 ],
