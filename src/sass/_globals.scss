@@ -1,7 +1,7 @@
-@import "utils/variables";
+@import 'utils/variables';
 
-
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -46,7 +46,7 @@ ul {
   font-family: 'Material Icons', serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 24px; /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;

@@ -1,5 +1,5 @@
 //! Themes
-@import "themes/slate";
+@import 'themes/slate';
 // @import "themes/yeti";
 
 //! Vendors !//
@@ -15,7 +15,8 @@
 @import "utils/variables";
 
 //! setup
-@import "setup/normalize";  // normalize browsers to make more consistent
+@import "setup/normalize";
+// normalize browsers to make more consistent
 
 // Layout
 @import "layout/features";
@@ -40,23 +41,6 @@ span {
   display: inline-block;
 }
 
-.icon-block {
-  padding: 0 15px;
-}
-
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-.test-labelle {
-  font-family: $font-family-la-belle-cursiv;
-  font-weight: 400;
-}
-
-html, body, .block {
-  height: 100%;
-}
-
 // Class for when element is above threshold
 .pin-top {
   position: relative;
@@ -72,6 +56,8 @@ html, body, .block {
   position: fixed !important;
 }
 
-.image-test {
-  background: url("../assets/images/background1.jpg");
+.feature-badges {
+  & a {
+    padding: 0 5px;
+  }
 }
