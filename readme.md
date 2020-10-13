@@ -28,7 +28,6 @@ This Webpack4-Sass Boilerplate contains the following features:
 - concentrate and minify JavaScript.
 - Compile, minify, Autoprefix SASS.
 - Optimize and Cache Images
-- Linting for your JS and SASS
 
 ## Features
 
@@ -38,7 +37,6 @@ This project contains the following loaders & plugins:
 
 - `node-sass` for compiling sass (SCSS)
 - `babel-loader` for compiling ES6 code
-- `babel-eslint && eslint-loader` for Linting your .js
 - `webpack-dev-server` for serving & Hot-Reloading
 - `css-loader` for compressing css
 - `sass-loader` for compressing and loading scss & sass
@@ -99,33 +97,29 @@ This will:
 
 ├── src
 │   ├── assets
+|   |   ├── fonts
+|   |   |     ├── raleway
+|   |   |     └── xxx yourFont xxx
 │   │   └── images
-│   ├── fonts
-│   ├── sass
-│   │   ├── layout
-|   |   |     └── _features.scss
-│   │   ├── setup
-|   |   |     └── _normalize.scss
-│   │   ├── themes
-|   |   |     ├── _slate.scss
-|   |   |     └── _yeti.scss
-│   │   ├── utils
+│   ├── js
+│   │   ├── custom.js
+|   |   └── vendor.js
+│   ├── styles
+│   │   ├── _vendor
+|   |   |     ├── hamburgers
+|   |   |     └── animatecss.scss
+│   │   ├── basics
+|   |   |     ├── _setup.scss
+|   |   |     └── _typography.scss│
+|   │   ├── _utils
 |   |   |     ├── _mixins.scss
 |   |   |     └── _variables.scss
-│   │   ├── _globals.scss
-│   │   ├── _headings.scss
-│   │   ├── _typography.scss
-│   │   ├── _vendor.scss
-│   │   └── main.scss
-│   ├── ts
-│   │   ├── custom.jss
-│   │   ├── line-awesome.js
-│   │   ├── vendor.js
+|   │   ├── globals.scss
+│   │   └── styles.scss
 │   |── .htaccess
 │   |── 404.html
 │   |── index.html
 │   └── app.js
-
 
 
 ├── dist
@@ -143,20 +137,16 @@ This will:
 │   └── index.html
 
 ```
-### Loading the Features you need
-
-in  `src/js/vendor/_boostrap.js` uncomment all Features you need
-
-put your custom js to `src/js/_custom.js`
+put your custom js to `src/js/custom.js`
 
 
 <hr/>
 
 ### Instructions
 
-- Add `sass`(.scss) files to `src/_scss` folder.
+- Add `sass`(.scss) files to `src/styles` folder.
 
-    - Make sure you import the scss file in `main.scss`
+    - Make sure you import the scss file in `styles.scss`
       ```
       @import "filename";
       ```
@@ -166,16 +156,12 @@ put your custom js to `src/js/_custom.js`
 
 ## TODO list
 
-- [x] Bootstrap 4
-- [x] Webpack 4
-- [x] Jquery
-- [x] PopperJS v2
-- [x] Include ES-Lint
-- [x] Font-Awesome
+- [ ] Add Tailwind
+- [ ] Upgrade to Webpack 5
+- [ ] Adding LineAwesome Latest
 - [x] Assets Loader
 - [x] Separated location for Bundled Files
 - [x] Adding EsLint
-- [ ] Code Optimising
 - [x] Uglify and Minify JS with Terser
 
 ## Licence
