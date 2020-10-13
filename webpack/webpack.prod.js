@@ -1,8 +1,6 @@
 // Merges webpack.common config with this production config
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
-
-const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // Optimisations and Compression
@@ -38,7 +36,7 @@ module.exports = merge(common, {
             // minSize: 0,
             cacheGroups: {
                 vendor: {
-                    test: /node_modules/, // you may add "vendor.js" here if you want to
+                    test: /node_modules/,
                     name: "node-modules",
                     chunks: "initial",
                     enforce: true

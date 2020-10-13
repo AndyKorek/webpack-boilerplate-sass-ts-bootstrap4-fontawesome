@@ -4,16 +4,11 @@
             <a href="https://webpack.js.org/"><img alt="Webpack" src="https://img.shields.io/badge/Webpack-4.41.6-%238DD6F9.svg"></a>
                 <a href="https://babeljs.io/"><img alt="Webpack" src="https://img.shields.io/badge/Babel%2FCore-7.8.4-%23f5da55.svg"></a>
                 <a href="https://www.npmjs.com/package/gulp-sass"><img alt="node-sass" src="https://img.shields.io/badge/node--sass-v4.13.1-ff69b4.svg"></a>
-                <a href="https://jquery.com/"><img src="https://img.shields.io/badge/jQuery-3.3.1-blue.svg" alt="jquery"></a>
-                <a href="https://lodash.com/"><img src="https://img.shields.io/badge/lodash-4.17.15-blue.svg" alt="jquery"></a>
-                <a href="https://popper.js.org/"><img src="https://img.shields.io/badge/popper.js-2.0.6-blue.svg" alt="popper.js"></a>
                 <a href="https://eslint.org/"><img src="https://img.shields.io/badge/es--lint-5.15.1-%23463fd4.svg" alt="eslint"></a>
-                <a href="https://fontawesome.com/"><img alt="Font Awesome" src="https://img.shields.io/badge/Font--Awesome-5.12.1-blue.svg"></a>
                 <a href="https://icons8.com/line-awesome"><img alt="Line Awesome" src="https://img.shields.io/badge/Line%20Awesome-1.3.0-green"></a>
 </p>
 
 ![webpack logo](https://abload.de/img/webpack1tkeb.png)
-![bootstrap logo](https://abload.de/img/bootstrap-logo-vector78khf.png)
 ![babel logo](https://abload.de/img/2000px-babel_logo.svgrzkxw.png)
 ![sass logo](https://abload.de/img/1280px-sass_logo_colo0bjb4.png)
 
@@ -22,29 +17,18 @@
   <em>
   SASS
   · Babel
-  · Bootstrap
-  · JQuery
-  · PopperJS
-  · Font Awesome
   </em>
 </p>
 
 This Webpack4-Sass Boilerplate contains the following features:
 
 - Webpack4 & Dev-Server
-- TypeScript 3.7.5
 - Babel ES6 Compiler
-- Bootstrap v4 - with Theme Support
-- Font Awesome v5.7
 - Animate.css Library v3.7.2
-- JQuery v3.3.1
-- PopperJS v2
-- _lodash
 - concentrate and minify JavaScript.
 - Compile, minify, Autoprefix SASS.
 - Optimize and Cache Images
-- Preconfigured BootsWatch Template (YETI & Slate)
-- Linting for your TS, JS and SASS
+- Linting for your JS and SASS
 
 ## Features
 
@@ -55,13 +39,10 @@ This project contains the following loaders & plugins:
 - `node-sass` for compiling sass (SCSS)
 - `babel-loader` for compiling ES6 code
 - `babel-eslint && eslint-loader` for Linting your .js
-- `tslint` for Linting your .ts 
-- `lodash-webpack-plugin` create smaller Lodash builds by replacing feature sets of modules with noop, identity, or simpler alternatives.
 - `webpack-dev-server` for serving & Hot-Reloading
 - `css-loader` for compressing css
 - `sass-loader` for compressing and loading scss & sass
 - `url- & file-loader` for loading and optimizing images
-- `xml and csv loader` for loading data files
 - `html-loader` for loading & optimizing html files
 - `clean-webpack-plugin` for keeping your dist folder clean
 - `favicons-webpack-plugin` generate favicons form your "logo.png"
@@ -137,13 +118,13 @@ This will:
 │   │   ├── _vendor.scss
 │   │   └── main.scss
 │   ├── ts
-│   │   ├── custom.ts
-│   │   ├── line-awesome.ts
-│   │   ├── vendor.ts
+│   │   ├── custom.jss
+│   │   ├── line-awesome.js
+│   │   ├── vendor.js
 │   |── .htaccess
 │   |── 404.html
 │   |── index.html
-│   └── index.ts
+│   └── app.js
 
 
 
