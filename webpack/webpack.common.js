@@ -4,8 +4,6 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin')
-
 
 // Linting
 
@@ -97,7 +95,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              name: '.assets/fonts/*/[name].[hash:6].[ext]',
+              name: './assets/fonts/*/[name].[hash:6].[ext]',
               publicPath: '../',
               limit: 8192
             },
@@ -141,7 +139,6 @@ module.exports = {
       emitWarning: true,
       failOnError: false,
       fix: true
-    }),
-    new ESLintPlugin()
+    })
   ],
 };

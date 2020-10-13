@@ -10,7 +10,7 @@ module.exports = {
       modules: true
     },
     babelOptions: {
-      configFile: 'path/to/config.js',
+      configFile: '.babelrc',
     },
   },
   env: {
