@@ -196,6 +196,7 @@ put your custom js to `src/js/_custom.js`
 - [x] Adding EsLint
 - [ ] Code Optimising
 - [x] Uglify and Minify JS with Terser
+- [ ] Remove FontAwesome in favor of LineAwesome 
 
 ## Licence
 
